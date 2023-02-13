@@ -1,20 +1,23 @@
 function renderContact() {
-    const content = document.getElementById('content');
+    const pageContent = document.getElementById('pages');
 
-    const contentContact = document.createElement('div');
-    contentContact.classList.add('contentContact');
+    const contact = document.createElement('div');
+    contact.setAttribute('id', 'contact');
 
 
     function addParagraph(text) {
         const newPara = document.createElement('p');
         newPara.classList.add('homePara');
-        newPara.innerHTML = text;
-        contentHome.appendChild(newPara);
+        newPara.textContent = text;
+        contact.appendChild(newPara);
     }
 
     addParagraph('Find us at 1125 Finnegan Way, Fairhaven, WA');
     addParagraph('Phone: (360)-746-8098');
 
-    content.appendChild(contentHome);
+
+    pageContent.appendChild(contact);
 
 }
+
+export { renderContact };
