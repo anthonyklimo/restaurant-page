@@ -1,20 +1,20 @@
 function renderHome() {
-    const content = document.getElementById('content');
+    const pageContent = document.getElementById('pages');
 
-    const contentHome = document.createElement('div');
-    contentHome.classList.add('contentHome');
+    const home = document.createElement('div');
+    home.setAttribute('id', 'home');
 
 
     function addParagraph(text) {
         const newPara = document.createElement('p');
         newPara.classList.add('homePara');
-        newPara.innerHTML = text;
-        contentHome.appendChild(newPara);
+        newPara.textContent = text;
+        home.appendChild(newPara);
     }
 
     addParagraph('Welcome to Maikham!');
 
-    content.appendChild(contentHome);
+    pageContent.appendChild(home);
 
 }
 
